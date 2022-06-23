@@ -1,8 +1,8 @@
 #container{
     display: grid;
-    grid-template-columns: repeat(16 , 1fr);
-    width: 75vw;
-    height: 75vh;
+    grid-template-columns: repeat(25 , 1fr);
+    width: 80vw;
+    height: 80vh;
 }
 .box{
     background-color: black;
