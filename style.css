@@ -13,10 +13,6 @@ body{
     height: 80vh;
     background-color: white;
 }
-.box{
-    background-color: black;
-    box-sizing: border-box;
-}
 .outer{
     padding: 4vh;
     background-color: rgb(212, 36, 36);
@@ -28,4 +24,8 @@ button{
     padding: 5px 20px;
     border: 1px solid rgb(212, 36, 36);
     border-radius: 20px;
+}
+.button-container{
+    display: flex;
+    gap: 20px;
 }

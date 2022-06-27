@@ -1,8 +1,8 @@
 let color = []
 const grid = []
 const container = document.querySelector('#container')
-const button = document.querySelector('#button')
-button.addEventListener("click" , () => {
+const gridChange = document.querySelector('#grid-change')
+gridChange.addEventListener("click" , () => {
     let num = parseInt(prompt("Enter the amount grids \n Max amount = 100"))
     if (num > 100){
         alert("ERROR number greater than 100")
@@ -13,8 +13,15 @@ button.addEventListener("click" , () => {
     let num2 = num ** 2
     sketch(num2)
     }
-
 ) 
+const reset = document.querySelector('#reset')
+reset.addEventListener('click' , () => {
+    const divs = document.querySelectorAll('#container div')
+    console.log(divs)
+    divs.forEach( function(div){
+        div.style.cssText = "background-color : white"
+    })
+})
 // function to sketch the boxes
 function sketch(n=625){
 for (let i = 0 ; i < n ; i++){
@@ -24,7 +31,6 @@ for (let i = 0 ; i < n ; i++){
 }
 
  grid.forEach(div => div.addEventListener('mouseenter'  , (e) =>{
-    // e.target.classList.add('box')
     let num = Number(e.target.classList.value)
     if (color[num] == undefined){
         color[num] = randColor()
@@ -32,7 +38,6 @@ for (let i = 0 ; i < n ; i++){
     else{
         color[num] = shadeColor(color[num] , 10)
         }
-     console.log(color[num])
      e.target.style.cssText = `background-color:${color[num]};` 
    }) )
 }
