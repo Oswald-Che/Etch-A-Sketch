@@ -14,10 +14,14 @@ body{
     background-color: white;
 }
 .outer{
-    padding: 4vh;
+    padding: 1vh 4vh 4vh 4vh;
     background-color: rgb(212, 36, 36);
     border-radius: 20px;
     box-shadow: 10px 10px 10px ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
 }
 button{
@@ -28,4 +32,9 @@ button{
 .button-container{
     display: flex;
     gap: 20px;
+}
+span {
+    font-size: 25px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 400;
 }

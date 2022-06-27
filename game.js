@@ -1,8 +1,8 @@
 let color = []
-let a
 const grid = []
 const container = document.querySelector('#container')
 const gridChange = document.querySelector('#grid-change')
+// button to change grid size
 gridChange.addEventListener("click" , () => {
     let num = parseInt(prompt("Enter the amount grids \n Max amount = 100"))
     if (num > 100){
@@ -16,6 +16,7 @@ gridChange.addEventListener("click" , () => {
     sketch(num2)
     }
 ) 
+//button to reset color
 const reset = document.querySelector('#reset')
 reset.addEventListener('click' , () => {
     const divs  = document.querySelectorAll('#container div')
@@ -31,7 +32,7 @@ for (let i = 0 ; i < n ; i++){
    grid[i].classList.add(`${i}`)
    container.appendChild(grid[i])
 }
-
+ 
  grid.forEach(div => div.addEventListener('mouseenter'  , (e) =>{
     let num = Number(e.target.classList.value)
     if (color[num] == undefined){
@@ -42,7 +43,6 @@ for (let i = 0 ; i < n ; i++){
         }
      e.target.style.cssText = `background-color:${color[num]};` 
    }) )
-     a = n
 }
 //function for Random color generator
 function randColor(){
