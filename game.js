@@ -1,4 +1,5 @@
 let color = []
+let a
 const grid = []
 const container = document.querySelector('#container')
 const gridChange = document.querySelector('#grid-change')
@@ -9,6 +10,7 @@ gridChange.addEventListener("click" , () => {
         return
     }
     container.innerHTML = ''
+    color = []
     container.style.cssText = `grid-template-columns:repeat(${num} , 1fr)`
     let num2 = num ** 2
     sketch(num2)
@@ -16,10 +18,10 @@ gridChange.addEventListener("click" , () => {
 ) 
 const reset = document.querySelector('#reset')
 reset.addEventListener('click' , () => {
-    const divs = document.querySelectorAll('#container div')
-    console.log(divs)
-    divs.forEach( function(div){
+    const divs  = document.querySelectorAll('#container div')
+    divs.forEach(div => {
         div.style.cssText = "background-color : white"
+        color = []
     })
 })
 // function to sketch the boxes
@@ -40,6 +42,7 @@ for (let i = 0 ; i < n ; i++){
         }
      e.target.style.cssText = `background-color:${color[num]};` 
    }) )
+     a = n
 }
 //function for Random color generator
 function randColor(){
@@ -48,6 +51,7 @@ function randColor(){
     let color = randomNumber.padStart(6 , 0)
     return `#${color.toUpperCase()}`
 }
+// function for color decrease
 function shadeColor(color, percent) {
     var num = parseInt(color.slice(1),16),
         amt = Math.round(2.55 * percent),
