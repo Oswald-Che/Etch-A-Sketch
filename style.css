@@ -1,10 +1,31 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5vh;
+}
+
 #container{
     display: grid;
     grid-template-columns: repeat(25 , 1fr);
     width: 80vw;
     height: 80vh;
+    background-color: white;
 }
 .box{
     background-color: black;
     box-sizing: border-box;
+}
+.outer{
+    padding: 4vh;
+    background-color: rgb(212, 36, 36);
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px ;
+
+}
+button{
+    padding: 5px 20px;
+    border: 1px solid rgb(212, 36, 36);
+    border-radius: 20px;
 }

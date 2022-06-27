@@ -22,6 +22,6 @@ for (let i = 0 ; i < n ; i++){
 
  grid.forEach(div => div.addEventListener('mouseenter'  , (e) =>{
     e.target.classList.add('box')   
-   }))
+   }, { once : true}) )
 }
 sketch()
